@@ -7,6 +7,7 @@
 	<body>
 		<?php
 			echo "<h1> Hello cloud computing class </h1>";
+			echo "<h2> Hello my name is Chung </h2>";
 		?>
 	</body>
 </html>
