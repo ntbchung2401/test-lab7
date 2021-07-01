@@ -1,16 +1,18 @@
 <html>
 	<head>
-		<title>PHP Test</title>
+		<title></title>
 	</head>
 	<body>
+
 		<?php 
-		
-			echo '<p>TEST POSTGRESQL DATABASE </p>'; 
+			session_start();
+			echo" DATABASE for all shop";
 			include("local_config.php");
 			# Connect to DATABASE
 			$pg_conn = pg_connect($conn_string);
 			# Get data by query
-			$result = pg_query($pg_conn, "select * from product;");
+			$table = "product";
+			$result = pg_query($pg_conn, "select * from ".$table.";");
 			#var_dump(pg_fetch_all($result));
 			$numrows = pg_num_rows($result)
 		?>
@@ -20,7 +22,6 @@
 			pg_close();
 		?>
 		
-
 	</body>
 
 </html>
